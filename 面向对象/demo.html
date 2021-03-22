@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name,age){//构造函数
+                this.name = name;
+                this.age = age;
+            }
+        }
+        //let p = new Person('张三' , 13);
+        class Worker extends Person{
+            constructor(name,age,job){
+                super(name,age);
+                this.job = job;
+            }
+        }
+        let w = new Worker('李四',15,'计算机工程师');
+        alert(w.name+','+w.age+","+w.job)
+    </script>
+</body>
+</html>
