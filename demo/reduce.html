@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [12,56,34,23,24]
+        // tmp 第一次缓存第一个值,第二次与后面的数相加之后缓存结果 必须得return
+        // item tmp后面的值
+        // index
+        let arr2 = arr.reduce((tmp,item,index)=>{
+            if(index===arr.length-1){
+                return (tmp+item)/arr.length
+            }else{
+                return tmp+item
+            }
+        })
+        alert(arr2)
+    </script> 
+</body>
+</html>

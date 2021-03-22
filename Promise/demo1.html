@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let p = new Promise(function(resovle,reject){
+            //resovle 成功 reject 失败
+            $.ajax({
+                url: 'data/data1.txt',
+                dataType: 'json',
+                success(arr){
+                    resovle(arr)
+                },
+                error(res){
+                    reject(res)
+                }
+            })
+        })
+        p.then(arr=>{
+            alert("成功")
+            console.log(arr)
+        },res=>{
+            alert('失败')
+        })
+    </script>
+</body>
+</html>
